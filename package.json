@@ -15,10 +15,13 @@
     "lint": "npm run lint:js && npm run lint:sol",
     "lint:js": "eslint --ignore-path .gitignore . --fix",
     "lint:sol": "prettier --write \"contracts/**/*.sol\"",
-    "update-version": "scripts/release/update-version.js"
+    "update-version": "scripts/release/update-version.js",
+    "upload-images": "node scripts/ipfs-upload/upload_images.js"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.4.2"
+    "@openzeppelin/contracts": "^4.4.2",
+    "axios": "^0.27.2",
+    "ipfs-http-client": "^56.0.3"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.4",
